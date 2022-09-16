@@ -3,3 +3,4 @@
 // pub mod redis_util;
 // pub mod captcha_util;
 // pub mod toml_util;
+pub mod global_data;

@@ -60,16 +60,9 @@ impl ProfileInfo {
     }
     #[allow(dead_code)]
     #[html_sql("fast_common/src/sql/profile.html")]
-    pub async fn remove_batch(&self,rb: &Rbatis) ->Option<ProfileInfo> {
-         unimplemented!()
-        // let wp = rb.new_wrapper()
-        //     .r#if(self.user_id.clone().is_some(), |w| w.and().eq("user_id", self.user_id.clone().unwrap()))
-        //     .r#if(self.full_name.clone().is_some(), |w| w.and().eq("full_name", self.full_name.clone().unwrap()))
-        //     .r#if(self.address.clone().is_some(), |w| w.and().eq("address", self.address.clone().unwrap()))
-        //     .r#if(self.education.clone().is_some(), |w| w.and().eq("education", self.education.clone().unwrap()))
-        //     .r#if(self.birth_day.clone().is_some(), |w| w.and().eq("birth_day", self.birth_day.clone().unwrap()))
-        //     .r#if(self.create_date.clone().is_some(), |w| w.and().eq("create_date", self.create_date.clone().unwrap()));
-        // rb.remove_by_wrapper::<Self>(wp).await
+    pub async fn remove_batch(&self, rb: &Rbatis) -> Option<u64> {
+        unimplemented!()
     }
+
 
 }
