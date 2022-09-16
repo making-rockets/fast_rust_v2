@@ -7,4 +7,3 @@ use serde::de::DeserializeOwned;
 
 pub mod profile_info;
 pub mod dept_info;
-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
