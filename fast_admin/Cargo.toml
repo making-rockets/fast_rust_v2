@@ -1,0 +1,24 @@
+[package]
+name = "fast_admin"
+version = "0.1.0"
+authors = ["by965738071@163.com <by965738071@163.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+fast_common = { path = "../fast_common" }
+#log日志支持(必须)
+log = "0.4.17"
+env_logger = "0.9.0"
+actix-web = "4.2.1"
+actix-http = "3.2.2"
+anyhow = { version = "1.0.56" }
+#时间
+chrono = "0.4.22"
+#orm
+rbatis = { version = "4", default-features = false, features = ["debug_mode"] }
+rbdc-mysql = { version = "*" }
+rbson = { version = "2.0.5" }
+async-trait = "0.1.57"
+serde = { version = "1.0.144", features = ["derive"] }

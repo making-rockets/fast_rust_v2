@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+        "https://raw.githubusercontent.com/rbatis/rbatis/master/rbatis-codegen/mybatis-3-mapper.dtd">
+<mapper>
+
+    <select id="remove_batch">
+        `delete from profile`
+        <where>
+            <if test="user_id != ''">
+                ` and user_id = #{user_id}`
+            </if>
+            <if test="full_name !=null">
+                ` and full_name = #{full_name}`
+            </if>
+            <if test="address !=null">
+                ` and address = #{address}`
+            </if>
+            </if>
+            <if test="education !=null">
+                ` and education = #{education}`
+            </if>
+            </if>
+            <if test="address !=null">
+                ` and birth_day = #{birth_day}`
+            </if>
+            </if>
+            <if test="create_date !=null">
+                ` and create_date = #{create_date}`
+            </if>
+            <!--  <choose>
+                  <when test="true">
+                      ` and id != '-1'`
+                  </when>
+                  <otherwise>and id != -2</otherwise>
+              </choose>
+              ` and `
+              <trim prefixOverrides=" and">
+                  ` and name != '' `
+              </trim>-->
+        </where>
+    </select>
+</mapper>
